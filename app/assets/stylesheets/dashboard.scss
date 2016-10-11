@@ -1,0 +1,75 @@
+@import 'colors.scss';
+$padding: 30px;
+$border-color: #e0e0e0;
+.right .content .header{
+    background: white;
+    border-bottom: 1px solid $border-color;
+    color: black;
+    font-size: 130%;
+}
+
+.title:before{
+     font: normal normal normal 80% FontAwesome;
+     font-size: 110%;
+     vertical-align: middle;
+     margin-right: 10px;
+}
+.title.inbox:before{
+    content: '\f01c';
+}
+
+.title.upcoming:before{
+    content: '\f05a';
+    color: $green;
+}
+
+.title.calendar:before{
+    content: '\f073';
+    font-size: 90%;
+    position: relative;
+    top: -3px;
+}
+
+.messages, .upcoming-list{
+    list-style: none;
+    padding: 0px;
+    
+    li{
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        align-items: center;
+        .user{
+            margin-right: 20px;
+        }
+        
+        .right-align{
+            margin-left: auto;
+        }
+    }
+    .upcoming-price-text {
+        margin-right: 15px;
+        color: $green;
+    }
+    .arrow{
+        color: #a5a5a5;
+    }
+    .message-data{
+        .message-length{
+            font-weight: bold;
+            margin-right: 20px;
+        }
+    }
+}
+
+.container{
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+#calendar{
+    width: 500px;
+    border-left: 1px solid $border-color;
+}

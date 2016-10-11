@@ -1,0 +1,44 @@
+.tabs {
+  padding: 30px; }
+  .tabs a {
+    text-decoration: none;
+    color: #1fb8f4; }
+
+.tab {
+  padding: 10px; }
+  .tab.selected {
+    border-bottom: 3px solid #1fb8f4; }
+    .tab.selected a {
+      color: black; }
+
+.topper {
+  height: 200px;
+  width: 100%;
+  background: #ecf8ff;
+  border: 2px solid #1fb8f4; }
+  .topper .left-side {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #1fb8f4;
+    float: left; }
+  .topper .right-side {
+    width: 300px;
+    height: 100%;
+    float: right; }
+
+.option {
+  width: 33.33%;
+  float: left;
+  height: 200px;
+  padding: 10px; }
+  .option .option-content {
+    width: 100%;
+    height: 100%;
+    background: #ecf8ff;
+    box-shadow: 1px 1px 4px #c7c7c7; }
+  .option:nth-child(3n) {
+    padding-right: 0px; }
+  .option:nth-child(3n - 2) {
+    padding-left: 0px; }
+
+/*# sourceMappingURL=benefits.css.map */

@@ -1,0 +1,62 @@
+@import 'colors.scss';
+
+.tabs{
+    padding: 30px;
+    
+    a{
+        text-decoration: none;
+        color: $lightblue;
+    }
+}
+.tab{
+    padding: 10px;
+
+    &.selected{
+        border-bottom: 3px solid $lightblue;
+        
+        a{
+            color: black;
+        }
+    }
+}
+
+$topper-height: 200px;
+.topper {
+    height: $topper-height;
+    width: 100%;
+    background: $benefitblue;
+    border: 2px solid $lightblue;
+    
+    .left-side{
+        width: $topper-height;
+        height: 100%;
+        border-right: 1px solid $lightblue;
+        float: left;
+    }
+    .right-side{
+        width: $topper-height + 100px;
+        height: 100%;
+        float: right;
+    }
+}
+
+.option{
+    width: 33.33%;
+    float: left;
+    height: 200px;
+    padding: 10px;
+    
+    .option-content{
+        width: 100%;
+        height: 100%;
+        background: $benefitblue;
+        box-shadow: 1px 1px 4px #c7c7c7;
+    }
+    
+    &:nth-child(3n){
+        padding-right: 0px;
+    }
+    &:nth-child(3n - 2){
+        padding-left: 0px;
+    }
+}

@@ -1,0 +1,233 @@
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, html {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: 'Noto Sans', sans-serif; }
+
+body, html, .table, .row {
+  height: 100%;
+  width: 100%; }
+
+.table {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%; }
+
+.row {
+  display: table-row;
+  vertical-align: top; }
+
+.cell {
+  display: table-cell;
+  height: 100%;
+  vertical-align: top; }
+
+.header {
+  height: 75px;
+  line-height: 75px; }
+
+.left {
+  width: 300px;
+  background: #1a2c47;
+  color: #1fb8f4; }
+  .left .header {
+    background: #243f69;
+    color: white;
+    letter-spacing: 5px;
+    padding-left: 30px; }
+  .left .list {
+    list-style: none;
+    margin-bottom: 30px;
+    padding: 0px; }
+    .left .list a {
+      text-decoration: none;
+      color: #1fb8f4; }
+  .left .list li {
+    line-height: 2em;
+    padding-left: 40px; }
+    .left .list li.selected {
+      background: #204767;
+      border-left: 5px solid #1fb8f4;
+      padding-left: 35px; }
+  .left .list li:not(.list-header) {
+    cursor: pointer; }
+    .left .list li:not(.list-header):hover {
+      background: #204767;
+      border-left: 5px solid #1fb8f4;
+      padding-left: 35px; }
+  .left .list-header:before {
+    font: normal normal normal 80% FontAwesome;
+    padding-right: 5px;
+    color: #276b92;
+    display: inline-block;
+    width: 20px;
+    text-align: right;
+    margin-left: -20px;
+    position: relative;
+    top: -2px; }
+  .left .list-header.payment:before {
+    content: '\f155'; }
+  .left .list-header.hr:before {
+    content: '\f14a'; }
+  .left .list-header.company:before {
+    content: '\f1ad'; }
+  .left .list-header.you:before {
+    content: '\f007'; }
+  .left .list-header {
+    position: relative;
+    color: white;
+    font-size: 130%; }
+
+.right {
+  width: 100%; }
+  .right .menu {
+    display: none;
+    font-size: 120%;
+    margin-right: 0px; }
+  .right .header {
+    background: #1fb8f4;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    display: flex; }
+    .right .header .header-left {
+      font-size: 130%;
+      flex-grow: 2; }
+    .right .header .header-right {
+      display: flex;
+      float: right; }
+      .right .header .header-right span {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+        margin-right: 19px; }
+      .right .header .header-right .messages {
+        margin-top: 5px;
+        color: white;
+        cursor: pointer; }
+        .right .header .header-right .messages .fa {
+          position: relative;
+          font-size: 150%; }
+        .right .header .header-right .messages .message-num {
+          background: red;
+          border-radius: 10px;
+          font-size: 60%;
+          position: absolute;
+          top: -7px;
+          left: -7px;
+          height: 15px;
+          width: 15px;
+          text-align: center;
+          line-height: 15px;
+          color: #ffffff;
+          text-shadow: 1px 1px 1px #5c2b2b;
+          box-shadow: 0 0 1px 0px red inset, 0 0 1px 0px red; }
+      .right .header .header-right .user {
+        margin-top: 12px; }
+      .right .header .header-right .search-box {
+        margin-top: 10px;
+        background: #00a0e0;
+        width: 50%;
+        height: 55px;
+        line-height: 55px;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-grow: 3;
+        display: flex;
+        font-size: 110%;
+        color: white; }
+        .right .header .header-right .search-box .fa {
+          margin-right: 10px;
+          margin-top: 20px;
+          opacity: 0.8; }
+        .right .header .header-right .search-box #search {
+          width: 100%;
+          background: transparent;
+          border: none;
+          outline: none;
+          color: white;
+          font-size: 110%; }
+
+.user {
+  background: url(https://dl.dropboxusercontent.com/u/124904/usericon.jpg) -15px;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 30px;
+  margin-right: 0px;
+  cursor: pointer;
+  display: inline-block; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #00a0e0 inset; }
+
+::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.8; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: white; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white; }
+
+:-ms-input-placeholder {
+  color: white; }
+
+@media (max-width: 1024px) {
+  .left {
+    display: none;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    /*position: absolute;
+    top: 0px;
+    left: 0px;*/ }
+    .left.open {
+      display: table-cell; }
+
+  .right .menu {
+    display: inline;
+    margin-right: 10px; } }
+.icon-button {
+  font: normal normal normal 80% FontAwesome;
+  cursor: pointer;
+  border: 3px solid;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  line-height: 32px;
+  text-align: center; }
+
+.icon-button:before {
+  font-size: 140%;
+  position: relative;
+  top: -3px; }
+
+.icon-button.allow {
+  color: #38c338; }
+  .icon-button.allow:before {
+    content: '\f00c'; }
+
+.icon-button.disallow {
+  color: #f64e4e; }
+  .icon-button.disallow:before {
+    content: '\f00d'; }
+
+.clearfix:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,87 @@
+<!-- All the code is mine but the design is based on JUSTWORKS. justworks.com -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Doeswork.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui=1">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <div class="table">
+        <div class="row">
+            <div class="cell left">
+                <div class="header">DOESWORK.</div>
+                <div class="content">
+                    <ul class="list">
+                        <li class="list-header payment">Payments</li>
+                        <%= nav_link "Make a Payment", "/payments", :li, "" %>
+                        <li>Pay Hourly Employees</li>
+                        <li>Invoices & Reports</li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-header hr">HR</li>
+                        <%= nav_link "Benefits", "/benefits", :li, "" %>
+                        <li>Time off policies</li>
+                        <li>Documents</li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-header manage">Manage</li>
+                        <li>Employees</li>
+                        <li>Contractors</li>
+                        <li>Vendors</li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-header company">Company</li>
+                        <li>Directory</li>
+                        <li>Calendar</li>
+                        <li>Settings</li>
+                        <li>Permissions</li>
+                    </ul>
+                    <ul class="list">
+                        <li class="list-header you">You</li>
+                        <li>Paystubs</li>
+                        <li>Time off</li>
+                        <li>Settings</li>
+                        <li>Permissions</li>
+                    </ul>
+                    <div class="footer"></div>
+                </div>
+                
+            </div>
+            <div class="cell right">
+                <div class="header">
+                    <span class="header-left">
+                        <span class="menu"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                        <span class="company-title">Company Inc.</span>
+                    </span>
+                    <span class="header-right">
+                        <span class="search-box"><i class="fa fa-search" aria-hidden="true"></i><input placeholder="Find people" type="text" id="search" autocomplete="off" /></span>
+                        <%= link_to '/dashboard', :title => "Dashboard" do %>
+                            <span class="messages"><i class="fa fa-inbox" aria-hidden="true"><div class="message-num">3</div></i></span>
+                        <% end %>
+                        <span class="user"></span>
+                    </span>
+                </div>
+                <div class="content">
+                  <%= yield %>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementsByClassName('menu')[0].addEventListener('click', function(){
+            this.classList.toggle('open');
+            document.getElementsByClassName('left')[0].classList.toggle('open');
+        });
+    </script>
+    <!---->
+  </body>
+</html>

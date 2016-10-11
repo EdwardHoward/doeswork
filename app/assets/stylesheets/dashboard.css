@@ -1,0 +1,57 @@
+.right .content .header {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  color: black;
+  font-size: 130%; }
+
+.title:before {
+  font: normal normal normal 80% FontAwesome;
+  font-size: 110%;
+  vertical-align: middle;
+  margin-right: 10px; }
+
+.title.inbox:before {
+  content: '\f01c'; }
+
+.title.upcoming:before {
+  content: '\f05a';
+  color: #38c338; }
+
+.title.calendar:before {
+  content: '\f073';
+  font-size: 90%;
+  position: relative;
+  top: -3px; }
+
+.messages, .upcoming-list {
+  list-style: none;
+  padding: 0px; }
+  .messages li, .upcoming-list li {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    align-items: center; }
+    .messages li .user, .upcoming-list li .user {
+      margin-right: 20px; }
+    .messages li .right-align, .upcoming-list li .right-align {
+      margin-left: auto; }
+  .messages .upcoming-price-text, .upcoming-list .upcoming-price-text {
+    margin-right: 15px;
+    color: #38c338; }
+  .messages .arrow, .upcoming-list .arrow {
+    color: #a5a5a5; }
+  .messages .message-data .message-length, .upcoming-list .message-data .message-length {
+    font-weight: bold;
+    margin-right: 20px; }
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px; }
+
+#calendar {
+  width: 500px;
+  border-left: 1px solid #e0e0e0; }
+
+/*# sourceMappingURL=dashboard.css.map */
